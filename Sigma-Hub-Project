@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
    Name = "Sigma Hub",
    Icon = "sigma",
    LoadingTitle = "Please Wait",
-   LoadingSubtitle = "",
+   LoadingSubtitle = "Sigma is a cool letter tbh",
    Theme = "Default",
 
    DisableRayfieldPrompts = false,
@@ -40,7 +40,157 @@ local ScriptsTab = Window:CreateTab("Scripts", "scroll-text")
 ScriptsTab:CreateButton({
    Name = "Sigma Hub | Blade Ball",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/yourlinkhere"))()
+      local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Sigma Hub | Blade Ball",
+   Icon = "sigma",
+   LoadingTitle = "Please Wait",
+   LoadingSubtitle = "We Are Setting The Script Up",
+   Theme = "Default",
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+
+   KeySystem = false,
+   KeySettings = {
+      Title = "Pi Hub | Blade Ball | Key System",
+      Subtitle = "🔑 Enter the key below",
+      Note = "Get The Key from URL Below https://pastebin.com/kxB768SG",
+      FileName = "Key",
+      SaveKey = false,
+      GrabKeyFromSite = true,
+      Key = {"https://pastebin.com/raw/kxB768SG"}
+   }
+})
+
+-- Main Tab
+local MainTab = Window:CreateTab("Main", "home")
+
+Rayfield:Notify({
+   Title = "Script succsessfully executed!",
+   Content = "yay",
+   Duration = 5,
+   Image = "check",
+})
+-- Auto Parry Button
+MainTab:CreateButton({
+   Name = "Auto Parry",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/Circle"))()
+   end
+})
+
+-- Exploits Tab
+local ExploitsTab = Window:CreateTab("Exploits", "zap")
+
+-- SpeedHack Toggle
+local SpeedHackToggle = ExploitsTab:CreateToggle({
+    Name = "SpeedHack Toggle",
+    CurrentValue = false,
+    Flag = "SpeedHackToggle",
+    Callback = function(Value)
+        if Value then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = SpeedHackSliderValue
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+    end,
+})
+
+-- SpeedHack Slider
+local SpeedHackSliderValue = 22
+local SpeedHackSlider = ExploitsTab:CreateSlider({
+    Name = "SpeedHack Slider",
+    Range = {22, 250},
+    Increment = 1,
+    Suffix = "Speed",
+    CurrentValue = 22,
+    Flag = "SpeedHackSlider",
+    Callback = function(Value)
+        SpeedHackSliderValue = Value
+        if SpeedHackToggle.CurrentValue then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
+    end,
+})
+
+-- Infinite Jump Button
+ExploitsTab:CreateButton({
+    Name = "Infinite Jump",
+    Callback = function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+    end
+})
+
+-- Low Gravity Toggle
+local LowGravityEnabled = false
+local LowGravitySliderValue = 1
+local defaultGravity = 196.2
+
+local LowGravityToggle = ExploitsTab:CreateToggle({
+    Name = "Low Gravity",
+    CurrentValue = false,
+    Flag = "LowGravityToggle",
+    Callback = function(Value)
+        LowGravityEnabled = Value
+        if LowGravityEnabled then
+            game:GetService("Workspace").Gravity = LowGravitySliderValue
+        else
+            game:GetService("Workspace").Gravity = defaultGravity
+        end
+    end,
+})
+
+-- Low Gravity Slider
+local LowGravitySlider = ExploitsTab:CreateSlider({
+    Name = "Low Gravity Slider",
+    Range = {0.1, defaultGravity},
+    Increment = 0.1,
+    Suffix = "Gravity",
+    CurrentValue = 1,
+    Flag = "LowGravitySlider",
+    Callback = function(Value)
+        LowGravitySliderValue = Value
+        if LowGravityEnabled then
+            game:GetService("Workspace").Gravity = Value
+        end
+    end,
+})
+-- Settings Tab
+local SettingsTab = Window:CreateTab("Settings", "cog")
+
+-- Unload Button
+SettingsTab:CreateButton({
+   Name = "Unload",
+   Callback = function()
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
+      game:GetService("Workspace").Gravity = defaultGravity
+      game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+
+      Rayfield:Destroy()
+   end
+})
+
+-- Finalize the UI
+Window:Select()
    end
 })
 
