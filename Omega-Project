@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Sigma Hub",
-   Icon = "sigma",
+   Name = "Pi Hub",
+   Icon = "pi",
    LoadingTitle = "Please Wait",
-   LoadingSubtitle = "Sigma is a cool letter tbh",
+   LoadingSubtitle = "pi or pie?",
    Theme = "Default",
 
    DisableRayfieldPrompts = false,
@@ -38,13 +38,13 @@ local Window = Rayfield:CreateWindow({
 local ScriptsTab = Window:CreateTab("Scripts", "scroll-text")
 
 ScriptsTab:CreateButton({
-   Name = "Sigma Hub | Blade Ball",
+   Name = "Pi Hub | Blade Ball",
    Callback = function()
       local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Sigma Hub | Blade Ball",
-   Icon = "sigma",
+   Name = "Pi Hub | Blade Ball",
+   Icon = "pi",
    LoadingTitle = "Please Wait",
    LoadingSubtitle = "We Are Setting The Script Up",
    Theme = "Default",
@@ -195,13 +195,13 @@ Window:Select()
 })
 
 ScriptsTab:CreateButton({
-   Name = "Sigma Hub | Math Murder",
+   Name = "Pi Hub | Math Murder",
    Callback = function()
       local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
       local Window = Rayfield:CreateWindow({
-         Name = "Sigma Hub | Math Murder",
-         Icon = "sigma",
+         Name = "Pi Hub | Math Murder",
+         Icon = "pi",
          LoadingTitle = "Please Wait",
          LoadingSubtitle = "We are setting everything up",
          Theme = "Default",
@@ -255,7 +255,7 @@ OtherScriptsTab:CreateButton({
 })
 
 OtherScriptsTab:CreateButton({
-   Name = "MSPaint V4",
+   Name = "mspaint v4",
    Callback = function()
       loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
    end
