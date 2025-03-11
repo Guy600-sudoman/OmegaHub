@@ -105,7 +105,7 @@ local SpeedHackToggle = ExploitsTab:CreateToggle({
         if Value then
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = SpeedHackSliderValue
         else
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
         end
     end,
 })
