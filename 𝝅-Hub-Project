@@ -270,8 +270,8 @@ local Button = OtherScriptsTab:CreateButton({
 -- Credits Tab
 local CreditsTab = Window:CreateTab("Credits", "users")
 
-CreditsTab:CreateLabel("Owner: @RobloxMultiverse_IV")
-CreditsTab:CreateLabel("Contributor: @Void19329")
+CreditsTab:CreateLabel("Owner: Amir")
+CreditsTab:CreateLabel("Contributor: Gojo")
 
 
 -- Settings Tab
