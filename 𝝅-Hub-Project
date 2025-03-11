@@ -267,13 +267,6 @@ local Button = OtherScriptsTab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
    end,
 })
--- Credits Tab
-local CreditsTab = Window:CreateTab("Credits", "users")
-
-CreditsTab:CreateLabel("Owner: Amir")
-CreditsTab:CreateLabel("Contributor: Gojo")
-
-
 -- Settings Tab
 local SettingsTab = Window:CreateTab("Settings", "cog")
 
