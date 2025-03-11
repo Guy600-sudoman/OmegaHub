@@ -261,11 +261,18 @@ OtherScriptsTab:CreateButton({
    end
 })
 
+local Button = OtherScriptsTab:CreateButton({
+   Name = "Inf Yield",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
 -- Credits Tab
 local CreditsTab = Window:CreateTab("Credits", "users")
 
 CreditsTab:CreateLabel("Owner: @RobloxMultiverse_IV")
 CreditsTab:CreateLabel("Contributor: @Void19329")
+
 
 -- Settings Tab
 local SettingsTab = Window:CreateTab("Settings", "cog")
