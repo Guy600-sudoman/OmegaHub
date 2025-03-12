@@ -270,6 +270,18 @@ local Button = OtherScriptsTab:CreateButton({
 -- Settings Tab
 local SettingsTab = Window:CreateTab("Settings", "cog")
 
+-- Theme Color Dropdown in Settings Tab
+local ThemeDropdown = SettingsTab:CreateDropdown({
+   Name = "Theme Color",
+   Options = {"Default", "AmberGlow", "Amethyst", "Bloom", "DarkBlue", "Green", "Light", "Ocean", "Serenity"},
+   CurrentOption = {"Default"},
+   MultipleOptions = false,
+   Flag = "ThemeDropdown",
+   Callback = function(SelectedOption)
+      Rayfield:SetTheme(SelectedOption[1])
+   end,
+})
+
 SettingsTab:CreateButton({
    Name = "Unload UI",
    Callback = function()
