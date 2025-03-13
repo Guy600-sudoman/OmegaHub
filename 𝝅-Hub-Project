@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Pi Hub",
-   Icon = "pi",
+   Name = "Zap Hub",
+   Icon = "zap",
    LoadingTitle = "Please Wait",
-   LoadingSubtitle = "pi or pie?",
+   LoadingSubtitle = "We are setting the script up",
    Theme = "Default",
 
    DisableRayfieldPrompts = false,
@@ -38,13 +38,13 @@ local Window = Rayfield:CreateWindow({
 local ScriptsTab = Window:CreateTab("Scripts", "scroll-text")
 
 ScriptsTab:CreateButton({
-   Name = "Pi Hub | Blade Ball",
+   Name = "Zap Hub | Blade Ball",
    Callback = function()
       local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Pi Hub | Blade Ball",
-   Icon = "pi",
+   Name = "Zap Hub | Blade Ball",
+   Icon = "zap",
    LoadingTitle = "Please Wait",
    LoadingSubtitle = "We Are Setting The Script Up",
    Theme = "Default",
@@ -94,7 +94,7 @@ MainTab:CreateButton({
 })
 
 -- Exploits Tab
-local ExploitsTab = Window:CreateTab("Exploits", "zap")
+local ExploitsTab = Window:CreateTab("Exploits", "bug")
 
 -- SpeedHack Toggle
 local SpeedHackToggle = ExploitsTab:CreateToggle({
@@ -195,13 +195,13 @@ Window:Select()
 })
 
 ScriptsTab:CreateButton({
-   Name = "Pi Hub | Math Murder",
+   Name = "Zap Hub | Math Murder",
    Callback = function()
       local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
       local Window = Rayfield:CreateWindow({
-         Name = "Pi Hub | Math Murder",
-         Icon = "pi",
+         Name = "Zap Hub | Math Murder",
+         Icon = "zap",
          LoadingTitle = "Please Wait",
          LoadingSubtitle = "We are setting everything up",
          Theme = "Default",
@@ -243,7 +243,6 @@ ScriptsTab:CreateButton({
       })
    end
 })
-
 -- Other Scripts Tab
 local OtherScriptsTab = Window:CreateTab("Other Scripts", "archive")
 
