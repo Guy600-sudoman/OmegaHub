@@ -267,13 +267,6 @@ local Button = OtherScriptsTab:CreateButton({
    end,
 })
 
-local Button = OtherScriptsTab:CreateButton({
-   Name = "Dex Explorer",
-   Callback = function()
-   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
-   end,
-})
--- Settings Tab
 local SettingsTab = Window:CreateTab("Settings", "cog")
 
 SettingsTab:CreateButton({
