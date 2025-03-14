@@ -253,7 +253,7 @@ OtherScriptsTab:CreateButton({
    end
 })
 
-OtherScriptsTab:CreateButton({
+local OtherScriptsTab:CreateButton({
    Name = "mspaint v4",
    Callback = function()
       loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
@@ -264,6 +264,13 @@ local Button = OtherScriptsTab:CreateButton({
    Name = "Inf Yield",
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
+
+local Button = OtherScriptsTab:CreateButton({
+   Name = "Dex Explorer",
+   Callback = function()
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
    end,
 })
 -- Settings Tab
